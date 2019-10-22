@@ -1,0 +1,15 @@
+readFromGPIOExtender
+readFromGPIOExtender
+readFromGPIOExtender
+read P16:0
+
+Skuff opened R7S1
+read P16:1
+
+Skuff closed R7S1
+read P7:0
+
+Skuff opened R4S1
+read P7:1
+
+Skuff closed R4S1
