@@ -3,5 +3,4 @@
 import client
 
 
-client.send("internet","kjabbewrap.py /home/medlem/flim/aapetter.mkv")
-
+#client.send("internet","kjabbewrap.py /home/medlem/flim/aapetter.mkv")

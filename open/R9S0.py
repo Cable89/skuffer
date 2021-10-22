@@ -2,5 +2,6 @@
 
 import client
 
-client.send("internet","kjabbewrap.py /media/nfs/ovsky/OVSky/divskrot/flim/kant_touch_this.mp4")
-client.send("jakt","SkuffeKeyboard.py Right")
+client.send("internet","play_random_from_folder.py /home/medlem/flim/skuffer/open/raoul")
+#client.send("internet","muttiii.sh")
+#client.send("jakt","SkuffeKeyboard.py Right")
