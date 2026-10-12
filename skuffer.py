@@ -7,6 +7,9 @@ import serial
 import copy
 import time
 import sys
+import logging
+import logging.config
+from systemd.journal import JournalHandler
 from pathlib import Path
 pinmap0 = {
 	'P2'		:'R0S0',
@@ -81,6 +84,49 @@ pinmap3 = {
 
 }
 
+LOGGING_CONFIG = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "formatters": {
+        "standard": {
+            "format": "[%(levelname)s] %(name)s::%(funcName)s::%(message)s",
+            "datefmt": "%Y-%m-%dT%H:%M:%S%z"
+        },
+    },
+    "handlers": {
+        "journalctl": {
+            "class": "systemd.journal.JournalHandler",
+            "formatter": "standard",
+            "level": "INFO",
+        },
+    },
+    "root": { # Root logger
+            "handlers": ["journalctl"],
+            "level": "INFO",
+    },
+}
+
+logging.config.dictConfig(LOGGING_CONFIG)
+
+# Get an instance of the logger
+log = logging.getLogger(__name__)
+
+#log.setLevel(logging.INFO)
+
+# Instantiate the JournaldLogHandler to hook into systemd
+#journal = JournalHandler()
+
+# Formatter for nice logs
+#journal.setFormatter(logging.Formatter( 
+#                                       #'%(asctime)s::'
+#										'[%(levelname)s]'
+#										'%(name)s::%(funcName)s::'
+#										'%(message)s'
+#))
+
+# Actually add the handler
+#log.addHandler(journal)
+
 def main():
 	time.sleep(5) #wait for all devices to come online/power on (specifically fixing the arduino/ttyUSB0)
 	w0 = threading.Thread(target=readFromGPIOExtender,args=('/dev/ttyACM0',pinmap0))
@@ -98,7 +144,7 @@ def main():
 	w3.start()
 
 def readFromGPIOExtender(device,extended_pins):
-	print("readFromGPIOExtender")
+	log.info("Thread started for readFromGPIOExtender")
 	ser = serial.Serial(device,9600, timeout=0.4)
 	ser.flush()
 	
@@ -108,11 +154,13 @@ def readFromGPIOExtender(device,extended_pins):
 			button = serialinput.split(':')
 			if(len(button) > 1):
 				if(len(button[1]) > 0):
-					print("read " + serialinput)
+					log.debug("read " + serialinput)
 					if(button[1][0] == '1'):
-						print("I stopped closing sounds")
+						#I stopped closing sounds
 						#buttonPress(extended_pins[(button[0])])
+						log.info("Skuff closed " + extended_pins[(button[0])])
 					else:
+						log.info("Skuff opened " + extended_pins[(button[0])])
 						buttonRelease(extended_pins[(button[0])])
 		except:
 			time.sleep(0.1)		
@@ -121,19 +169,17 @@ def readFromGPIOExtender(device,extended_pins):
 
 def buttonPress(button):
 	script = "/home/medlem/skuffer/close/" + button + ".py"
-	print("Skuff closed " + button)
 	try:
 		subprocess.Popen(['python3',script])
 	except:
-		print("Script " + script + " not found")
+		log.error("Script " + script + " not found")
 
 def buttonRelease(button):
-	print("Skuff opened " + button)
 	script = "/home/medlem/skuffer/open/" + button + ".py"
 	try:
 		subprocess.Popen(['python3',script])
 	except:
-		print("Script " + script + " not found")
+		log.error("Script " + script + " not found")
 
 
 main()
