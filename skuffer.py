@@ -7,6 +7,7 @@ import serial
 import copy
 import time
 import sys
+from pathlib import Path
 pinmap0 = {
 	'P2'		:'R0S0',
 	'P3'		:'R0S1',
@@ -81,10 +82,16 @@ pinmap3 = {
 }
 
 def main():
-	w0 = threading.Thread(target=readFromGPIOExtender,args=('/dev/ttyIO0',pinmap0))
-	w1 = threading.Thread(target=readFromGPIOExtender,args=('/dev/ttyIO1',pinmap1))
-	w2 = threading.Thread(target=readFromGPIOExtender,args=('/dev/ttyIO2',pinmap2))
-	w3 = threading.Thread(target=readFromGPIOExtender,args=('/dev/ttyIO3',pinmap3))
+	time.sleep(5) #wait for all devices to come online/power on (specifically fixing the arduino/ttyUSB0)
+	w0 = threading.Thread(target=readFromGPIOExtender,args=('/dev/ttyACM0',pinmap0))
+	w1 = threading.Thread(target=readFromGPIOExtender,args=('/dev/ttyACM1',pinmap1))
+	w2 = threading.Thread(target=readFromGPIOExtender,args=('/dev/ttyACM3',pinmap2))
+
+	a = Path("/dev/ttyUSB0")
+	if a.exists():
+		w3 = threading.Thread(target=readFromGPIOExtender,args=('/dev/ttyUSB0',pinmap3))
+	else:
+		w3 = threading.Thread(target=readFromGPIOExtender,args=('/dev/ttyUSB1',pinmap3))
 	w0.start()
 	w1.start()
 	w2.start()

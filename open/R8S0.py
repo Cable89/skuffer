@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
 import client
-
-client.send("internet","kjabbewrap.py /media/nfs/ovsky/OVSky/OV_Film/OVdrop.wmv")
+print("Hei!Nå er skuffen til Erik åpen - R8S0")
+client.send("internet","play_random_from_folder.py /home/medlem/flim/skuffer/open/erik")
 #client.send("jakt","SkuffeKeyboard.py Left")

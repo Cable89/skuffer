@@ -1,0 +1,128 @@
+total 288
+-rwxr-xr-x 1 medlem pi    124 May 27  2018 aaa.py
+lrwxrwxrwx 1 medlem pi      7 Jun 27  2019 amanda.py -> R9S2.py
+lrwxrwxrwx 1 medlem pi      8 Oct 26  2019 andreas.py -> R10S3.py
+-rwxrwxr-x 1 medlem pi    122 Apr 25  2017 arildspiss.py
+lrwxrwxrwx 1 medlem pi      8 Sep 16  2022 asbjorn.py -> R-1S2.py
+lrwxrwxrwx 1 medlem pi     12 Jun 27  2019 can.py -> ../../can.py
+-rwxrwxr-x 1 medlem pi   1077 Apr 21  2017 can.pyc
+lrwxrwxrwx 1 medlem pi      7 Jun 27  2019 chris.py -> R7S0.py
+lrwxrwxrwx 1 medlem pi     30 Oct 19  2019 client.py -> /home/medlem/skuffer/client.py
+-rw-r--r-- 1 medlem pi    797 Jun 20  2024 client.pyc
+-rwxr-xr-x 1 medlem pi    487 Feb 27  2024 client.py.old
+lrwxrwxrwx 1 medlem pi      7 Oct 25  2020 Daniel.py -> R2S0.py
+lrwxrwxrwx 1 medlem pi      7 Jun 27  2019 djgunnah.py -> R2S2.py
+lrwxrwxrwx 1 medlem pi      7 Jun 27  2019 edb.py -> R1S1.py
+lrwxrwxrwx 1 medlem pi      7 Jun 27  2019 einar.py -> R5S1.py
+lrwxrwxrwx 1 medlem pi      8 Jun 27  2019 emilie.py -> R10S2.py
+lrwxrwxrwx 1 medlem pi      7 Jan 17  2024 erik.py -> R8S0.py
+lrwxrwxrwx 1 medlem pi      7 Feb 11  2023 erlend.py -> R5S3.py
+lrwxrwxrwx 1 medlem pi      7 Apr 19  2024 flanell.py -> R0S0.py
+-rwxrwxr-x 1 medlem pi    170 Apr 19  2024 flanell.py.save
+lrwxrwxrwx 1 medlem pi      7 Dec 29  2022 foten.py -> R9S3.py
+lrwxrwxrwx 1 medlem pi      7 Jun 27  2019 frodo.py -> R7S3.py
+-rwxrwxr-x 1 medlem pi    126 May 29  2018 frodo.py.save
+-rwxr-xr-x 1 medlem pi     99 Apr 23  2018 hehe.py
+lrwxrwxrwx 1 medlem pi      7 Jun 27  2019 heidipeidialone.py -> R4S2.py
+lrwxrwxrwx 1 medlem pi      7 Feb 18  2023 helene.py -> R8S3.py
+lrwxrwxrwx 1 medlem pi      8 Jan 17  2024 helle.py -> R10S0.py
+-rwxr-xr-x 1 medlem pi    123 Sep 27  2021 henrik.py
+lrwxrwxrwx 1 medlem pi      7 Jun 27  2019 ht.py -> R6S3.py
+-rwxr-xr-x 1 medlem pi    121 Sep  4  2021 ida.py
+lrwxrwxrwx 1 medlem pi      8 Sep 18  2023 jens.py -> R12S1.py
+-rwxr-xr-x 1 medlem pi    211 Oct 13  2023 jens.py.save
+lrwxrwxrwx 1 medlem pi      7 Jun 27  2019 johannes.py -> R7S2.py
+lrwxrwxrwx 1 medlem pi      7 Oct 26  2019 kasper.py -> R8S3.py
+lrwxrwxrwx 1 medlem pi      7 Jan 30  2021 konstanse.py -> R4S2.py
+-rwxrwxrwx 1 medlem pi      3 Oct 12  2019 kontiki_count.txt
+lrwxrwxrwx 1 medlem pi      7 Feb 13  2024 lars_kr.py -> R4S3.py
+lrwxrwxrwx 1 medlem pi      7 Jun 27  2019 legolas.py -> R6S2.py
+lrwxrwxrwx 1 medlem pi      7 Jun 27  2019 lootboi.py -> R4S0.py
+lrwxrwxrwx 1 medlem pi      7 May 22  2024 lorang.py -> R3S0.py
+lrwxrwxrwx 1 medlem pi      7 Jun 27  2019 loverboy.py -> R8S1.py
+lrwxrwxrwx 1 medlem pi      7 Mar 29  2023 lyd.py -> R2S3.py
+lrwxrwxrwx 1 medlem pi      8 Jun 27  2019 mais.py -> R10S1.py
+lrwxrwxrwx 1 medlem pi      7 Jun 27  2019 marie.py -> R2S1.py
+lrwxrwxrwx 1 medlem pi      7 Jun 27  2019 marte.py -> R3S2.py
+lrwxrwxrwx 1 medlem pi      8 Mar 14  2023 mikachu.py -> R11S2.py
+lrwxrwxrwx 1 medlem pi      7 Jun 27  2019 nicho.py -> R2S3.py
+lrwxrwxrwx 1 medlem pi      7 Jun 27  2019 OS.py -> R9S3.py
+lrwxrwxrwx 1 medlem pi      7 Jun 27  2019 PA.py -> R2S0.py
+lrwxrwxrwx 1 medlem pi     10 Oct 13  2020 petter.py -> lootboi.py
+drwxr-xr-x 2 medlem pi   4096 Feb 27  2024 __pycache__
+-rwxrwxr-x 1 medlem pi    140 Apr 19  2024 R0S0.py
+-rwxrwxr-x 1 medlem pi    130 Apr 16  2021 R0S1.py
+-rwxrwxr-x 1 medlem pi    116 Jun 11  2017 R0S2.py
+-rwxrwxr-x 1 medlem pi    120 Mar 24  2018 R0S3.py
+-rwxrwxr-x 1 medlem pi    435 Nov  2 15:03 R10S0.py
+-rwxrwxr-x 1 medlem pi    108 May 30  2018 R10S1.py
+-rwxrwxr-x 1 medlem pi    677 Dec  4  2021 R10S2.py
+-rwxrwxr-x 1 medlem pi    278 Jan 30  2020 R10S3.py
+-rwxrwxr-x 1 medlem pi    137 Feb 12  2018 R11S0.py
+-rwxrwxr-x 1 medlem pi    124 Dec  4  2021 R11S1.py
+-rwxr-xr-x 1 medlem pi    170 Mar 14  2023 R11S2.py
+-rwxr-xr-x 1 medlem pi    208 Dec 16  2021 R12S0.py
+-rwxr-xr-x 1 medlem pi    209 Sep 18  2023 R12S1.py
+-rwxr-xr-x 1 medlem pi    211 May  6  2024 R12S2.py
+-rwxr-xr-x 1 medlem pi    211 Jan 12  2024 R12S3.py
+-rwxr-xr-x 1 medlem pi    208 Dec 13  2021 R13S0.py
+-rwxr-xr-x 1 medlem pi    212 Dec 13  2021 R13S1.py
+-rwxr-xr-x 1 medlem pi    210 Dec  6  2021 R13S2.py
+-rwxr-xr-x 1 medlem pi    210 Dec  6  2021 R13S3.py
+-rwxr-xr-x 1 medlem pi    208 Dec  6  2021 R14S1.py
+-rwxrwxr-x 1 medlem pi    106 Oct  9  2018 R1S0.py
+-rwxr-xr-x 1 medlem pi    127 Jan 23  2022 R-1S1.py
+-rwxrwxr-x 1 medlem pi    127 Jun 27  2019 R1S1.py
+-rwxr-xr-x 1 medlem pi    211 Sep 16  2022 R-1S2.py
+-rwxrwxr-x 1 medlem pi    117 Apr 20  2018 R1S2.py
+-rwxrwxr-x 1 medlem pi    209 Feb 13  2022 R1S3.py
+-rwxrwxr-x 1 medlem pi    124 Oct 25  2020 R2S0.py
+-rwxrwxr-x 1 medlem pi    225 Sep 18  2023 R2S1.py
+-rwxrwxr-x 1 medlem pi    193 Mar  5  2021 R2S2.py
+-rwxr-xr-x 1 medlem pi    156 Mar 29  2023 R2S3.py
+-rwxrwxr-x 1 medlem pi    109 Jun  9  2017 R2S3.py.old
+-rwxrwxr-x 1 medlem pi    138 May 22  2024 R3S0.py
+-rwxrwxr-x 1 medlem pi    201 Oct 20  2020 R3S1.py
+-rwxrwxr-x 1 medlem pi    452 Sep  5  2021 R3S2.py
+-rwxrwxr-x 1 medlem pi    125 Oct 14  2021 R3S3.py
+-rwxrwxr-x 1 medlem pi    125 Oct 25  2020 R4S0.py
+-rwxrwxr-x 1 medlem pi    172 Oct 26  2019 R4S1.py
+-rwxrwxr-x 1 medlem pi    129 Jan 30  2021 R4S2.py
+-rwxrwxr-x 1 medlem pi    127 Feb 13  2024 R4S3.py
+-rwxr-xr-x 1 root   pi    210 Mar 16  2024 R5S0.py
+-rwxrwxr-x 1 medlem pi    215 May 12  2024 R5S1.py
+-rwxrwxr-x 1 medlem pi    124 Jan 13  2024 R5S2.py
+-rwxr-xr-x 1 medlem pi    140 Feb 13  2023 R5S3.py
+-rwxrwxr-x 1 medlem pi    125 Oct 15  2020 R6S0.py
+-rwxrwxr-x 1 medlem pi    135 Jan 13  2022 R6S1.py
+-rwxrwxr-x 1 medlem pi     67 Oct 24  2021 R6S2.py
+-rwxrwxr-x 1 medlem pi    127 Jan 13  2022 R6S3.py
+-rwxrwxr-x 1 medlem pi    377 Dec  4  2021 R7S0.py
+-rwxrwxr-x 1 medlem pi    124 Feb  8  2023 R7S1.py
+-rwxrwxr-x 1 medlem pi    127 Jun 27  2019 R7S2.py
+-rwxrwxr-x 1 medlem pi    125 May 27  2018 R7S3.py
+-rwxrwxr-x 1 medlem pi    218 Jan 18  2024 R8S0.py
+-rwxrwxr-x 1 medlem pi    555 Jan 18  2024 R8S1.py
+-rwxrwxr-x 1 medlem pi    187 May 28  2018 R8S2.py
+-rwxrwxr-x 1 medlem pi    153 Jan 18  2024 R8S3.py
+-rwxrwxr-x 1 medlem pi    209 Jan  7  2020 R9S0.py
+-rwxrwxr-x 1 medlem pi    186 May 28  2018 R9S1.py
+-rwxrwxr-x 1 medlem pi    129 Oct 27  2019 R9S2.py
+-rwxrwxr-x 1 medlem pi    125 Dec 29  2022 R9S3.py
+lrwxrwxrwx 1 medlem pi      7 Jun 27  2019 raoul.py -> R9S0.py
+lrwxrwxrwx 1 medlem pi      7 Jun 27  2019 rosa.py -> R0S1.py
+lrwxrwxrwx 1 medlem pi      7 Jun 27  2019 sabeltann.py -> R3S1.py
+lrwxrwxrwx 1 medlem pi      7 Sep 18  2023 sebastian.py -> R2S1.py
+lrwxrwxrwx 1 medlem pi      7 Oct 13  2020 simen.py -> R7S1.py
+lrwxrwxrwx 1 medlem pi      7 Jun 27  2019 snorre.py -> R0S3.py
+lrwxrwxrwx 1 medlem pi      8 Jan 12  2024 steinar.py -> R12S3.py
+lrwxrwxrwx 1 medlem pi      8 Jun 27  2019 super.py -> R11S0.py
+lrwxrwxrwx 1 medlem pi      7 Oct 15  2020 teipen.py -> R6S0.py
+lrwxrwxrwx 1 medlem pi      7 Jun 27  2019 theta.py -> R5S2.py
+lrwxrwxrwx 1 medlem pi      7 Mar 16  2024 tipo0.py -> R5S0.py
+lrwxrwxrwx 1 medlem pi      7 Oct 26  2019 tor.py -> R4S3.py
+lrwxrwxrwx 1 medlem pi      8 Oct 13  2020 torsk.py -> R11S2.py
+lrwxrwxrwx 1 medlem pi      7 Jun 27  2019 tovine.py -> R8S2.py
+lrwxrwxrwx 1 medlem pi      7 Jan 13  2024 ulrik.py -> R5S2.py
+lrwxrwxrwx 1 medlem pi      7 Jun 27  2019 vaarrull.py -> R4S1.py
+-rw-r--r-- 1 root   root    0 Apr 30 03:35 vim

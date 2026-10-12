@@ -1,5 +1,5 @@
 #!/usr/bin/python
 
-#import client
-
-#client.send("internet","kjabbewrap.py /home/medlem/flim/allstar.mp4")
+import client
+print("R3S0")
+client.send("internet","play_random_from_folder.py /home/medlem/flim/skuffer/open/lorang")

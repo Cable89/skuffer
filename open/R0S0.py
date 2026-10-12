@@ -1,6 +1,5 @@
 #!/usr/bin/python
-
+ 
 import client
-
-client.send("internet","kjabbewrap.py /media/nfs/ovsky/OVSky/divskrot/flim/yellow.mp4")
-
+print("R0S0")
+client.send("internet","play_random_from_folder.py /home/medlem/flim/skuffer/open/flanell")

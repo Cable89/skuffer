@@ -2,13 +2,18 @@
 # Script for sending output to {internet, ink}.ed.ntnu.no
 import socket
 import sys
+import os
 
 def send(host,data):
-	s = socket.socket(socket.AF_INET6, socket.SOCK_STREAM)
-	port = 64000
-	s.connect((host, port, 0, 0))
-	s.send(bytes(data,'utf-8'))
-	s.close()
+	#s = socket.socket(socket.AF_INET6, socket.SOCK_STREAM)
+	#port = 64000
+	#s.connect((host, port, 0, 0))
+	#s.send(bytes(data,'utf-8'))
+	#s.close()
+	params = data.split(' ')
+	curl_command = "curl http://%s:1515/sm/random?path=%s" % (host, params[1])
+	os.system(curl_command);
+	
 
 if __name__ == "__main__":
 	if (sys.argv[1] == '--help'):

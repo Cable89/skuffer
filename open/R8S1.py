@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 import client
-
+print("R8S1")
 # Disabled since it randomly triggers when opening skuffer as sig's
 #client.send("internet","play_random_from_folder.py /home/medlem/flim/skuffer/open/loverboi")
 #int rand =
