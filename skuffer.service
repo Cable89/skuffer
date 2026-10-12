@@ -1,0 +1,13 @@
+[Unit]
+Description=Skuffeskript
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/home/medlem/skuffer/skuffer.py
+Restart=always
+RestartSec=2
+User=root
+
+[Install]
+WantedBy=default.target
