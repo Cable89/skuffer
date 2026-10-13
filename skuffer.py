@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 # script for reading inputs
 
+
 import subprocess
 import threading
 import serial
@@ -77,12 +78,35 @@ pinmap3 = {
         'K6'            :'R12S3',
         'K7'            :'R13S1',
         'K8'            :'R12S0',
-	'K9'            :'R-1S3',
-        'K10'            :'R-1S2',
-        'K11'            :'R-1S1',
-        'K12'            :'R-1S0',
+		'K9'            :'R-1S3',
+        'K10'           :'R-1S2',
+        'K11'           :'R-1S1',
+        'K12'           :'R-1S0',
 
 }
+
+class ColorFormatter(logging.Formatter):
+
+    yellow = "\x1b[33;20m"
+    grey = "\x1b[38;20m"
+    orange = "\x1b[33;20m"
+    red = "\x1b[31;20m"
+    bold_red = "\x1b[31;1m"
+    reset = "\x1b[0m"
+    format = "%(asctime)s  [%(levelname)s] %(name)s::%(funcName)s::%(message)s"
+
+    FORMATS = {
+        logging.DEBUG: yellow + format + reset,
+        logging.INFO: grey + format + reset,
+        logging.WARNING: orange + format + reset,
+        logging.ERROR: red + format + reset,
+        logging.CRITICAL: bold_red + format + reset
+    }
+
+    def format(self, record):
+        log_fmt = self.FORMATS.get(record.levelno)
+        formatter = logging.Formatter(log_fmt)
+        return formatter.format(record)
 
 LOGGING_CONFIG = {
     "version": 1,
@@ -92,17 +116,21 @@ LOGGING_CONFIG = {
             "format": "[%(levelname)s] %(name)s::%(funcName)s::%(message)s",
             "datefmt": "%Y-%m-%dT%H:%M:%S%z"
         },
+        "color": {
+            "()": ColorFormatter,
+            "datefmt": "%Y-%m-%dT%H:%M:%S%z"
+        },
     },
     "handlers": {
         "journalctl": {
             "class": "systemd.journal.JournalHandler",
-            "formatter": "standard",
-            "level": "INFO",
+            "formatter": "color",
+            "level": "DEBUG",
         },
     },
     "root": { # Root logger
             "handlers": ["journalctl"],
-            "level": "INFO",
+            "level": "DEBUG",
     },
 }
 
@@ -111,7 +139,6 @@ logging.config.dictConfig(LOGGING_CONFIG)
 # Get an instance of the logger
 log = logging.getLogger(__name__)
 
-#log.setLevel(logging.INFO)
 
 # Instantiate the JournaldLogHandler to hook into systemd
 #journal = JournalHandler()
@@ -128,6 +155,9 @@ log = logging.getLogger(__name__)
 #log.addHandler(journal)
 
 def main():
+	log.setLevel(logging.DEBUG)
+	log.debug("wololo")
+	log.info("info")
 	time.sleep(5) #wait for all devices to come online/power on (specifically fixing the arduino/ttyUSB0)
 	w0 = threading.Thread(target=readFromGPIOExtender,args=('/dev/ttyACM0',pinmap0))
 	w1 = threading.Thread(target=readFromGPIOExtender,args=('/dev/ttyACM1',pinmap1))
@@ -154,13 +184,10 @@ def readFromGPIOExtender(device,extended_pins):
 			button = serialinput.split(':')
 			if(len(button) > 1):
 				if(len(button[1]) > 0):
-					log.debug("read " + serialinput)
+					log.debug("read " + serialinput.strip())
 					if(button[1][0] == '1'):
-						#I stopped closing sounds
-						#buttonPress(extended_pins[(button[0])])
-						log.info("Skuff closed " + extended_pins[(button[0])])
+						buttonPress(extended_pins[(button[0])])
 					else:
-						log.info("Skuff opened " + extended_pins[(button[0])])
 						buttonRelease(extended_pins[(button[0])])
 		except:
 			time.sleep(0.1)		
@@ -168,13 +195,17 @@ def readFromGPIOExtender(device,extended_pins):
 
 
 def buttonPress(button):
-	script = "/home/medlem/skuffer/close/" + button + ".py"
-	try:
-		subprocess.Popen(['python3',script])
-	except:
-		log.error("Script " + script + " not found")
+	closingsound = False
+	log.info("Skuff closed " + button)
+	if closingsound:
+		script = "/home/medlem/skuffer/close/" + button + ".py"
+		try:
+			subprocess.Popen(['python3',script])
+		except:
+			log.error("Script " + script + " not found")
 
 def buttonRelease(button):
+	log.info("Skuff opened " + button)
 	script = "/home/medlem/skuffer/open/" + button + ".py"
 	try:
 		subprocess.Popen(['python3',script])

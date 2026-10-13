@@ -14,7 +14,11 @@ def send(host,data):
 	#s.send(bytes(data,'utf-8'))
 	#s.close()
 	params = data.split(' ')
+	if len(params) > 1:
+		params = params[1]
+
 	curl_command = '"curl http://%s:1515/sm/random?path=%s" > /dev/null 2>&1' % (host, params[1])
+    
 	#curl_command = "curl http://%s:1515/sm/random?path=%s" % (host, params[1])
 	os.system(curl_command);
 	
